@@ -1,15 +1,12 @@
-.section{ // element
+.first-section {
   width: 100%;
   height: auto;
   color: #000;
   position: relative;
+  min-height: 100%;
+  background: #f5f6f8 url('./images/background.jpg') center / cover no-repeat;
 
-  &.-first { // element.-modificator
-    min-height: 100%;
-    background: #f5f6f8 url('./images/background.jpg') center / cover no-repeat;
-  }
-
-  & > .content { // element > direct child
+  & > .content {
     padding: 30vh 250px 0;
 
     & > .title {
@@ -21,6 +18,12 @@
       text-transform: uppercase;
       letter-spacing: 3.6px;
       transition: color 2s;
+    }
+
+    & > .description {
+      font-size: 12px;
+      margin-left: 6px;
+      text-transform: uppercase;
     }
   }
 }
