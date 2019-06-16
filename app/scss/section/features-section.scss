@@ -1,0 +1,39 @@
+.features-section {
+  min-height: 500px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 80px;
+  box-sizing: border-box;
+
+  & > .item {
+    width: 25%;
+    height: 100px;
+    text-align: center;
+
+    & > .title {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 22px;
+      text-transform: uppercase;
+      margin: 15px 0;
+    }
+
+    & > .description {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 22px;
+      margin: 0;
+      text-transform: none;
+    }
+
+    & > .button {
+      background: none;
+      border: none;
+      text-transform: uppercase;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+  }
+}
