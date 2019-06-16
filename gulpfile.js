@@ -1,34 +1,66 @@
-var gulp = require(`gulp`);
-var sass = require(`gulp-sass`); 
-var browser = require(`browser-sync`);
+var gulp = require('gulp');
+var sass = require('gulp-sass'); 
+var browser = require('browser-sync');
+var postCss = require('gulp-postcss');
+var autoprefixer = require('autoprefixer');
+var htmlInclude = require('gulp-lb-include');
+var clean = require('gulp-clean');
 
+// handle html
+gulp.task('html', function () {
+  return gulp.src('app/index.html')
+    .pipe(htmlInclude())
+    .pipe(gulp.dest('public/'))
+    .pipe(browser.reload({stream: true}))
+});
 
-
-gulp.task(`sass`, async function(){
-  return gulp.src(`app/css/style.css`)
+// handle styles
+gulp.task('styles', async function() {
+  return gulp.src('./app/scss/index.scss', {
+            sourcemaps: true
+          })
     .pipe(sass())
-    .pipe(gulp.dest(`dist`))
+    .pipe(postCss([autoprefixer()]))
+    .pipe(gulp.dest('public'))
     .pipe(browser.reload({stream: true}))
-})
+});
 
-gulp.task(`script`, async function(){
-  return gulp.src(`app/js/index.js`)
-    .pipe(gulp.dest(`dist`))
+// handle scripts
+gulp.task('script', async function() {
+  return gulp.src('app/js/index.js')
+    .pipe(gulp.dest('public'))
     .pipe(browser.reload({stream: true}))
-})
+});
 
-gulp.task(`browser`, async function(){
+// run local server for developing
+gulp.task('browser', async function() {
   browser({
     server: {
-      baseDir: `dist`
+      baseDir: 'public'
     },
     notify: false 
   })
+});
+
+// handle files
+gulp.task('copy', async function () {
+  return gulp.src('app/images/**')
+    .pipe(gulp.dest('public/images'))
+});
+
+
+gulp.task('clean', function() {
+  return gulp.src('public', {read: false, allowEmpty: true})
+    .pipe(clean({force: true}))
+});
+
+// enable watch to run bundle after some changes
+gulp.task('watch', function(){
+  gulp.watch('app/scss/**/*.scss', gulp.parallel('styles'));
+  gulp.watch('app/js/index.js', gulp.parallel('script'));
+  gulp.watch('app/**/*.html', gulp.parallel('html'));
+  gulp.watch('app/images/**', gulp.parallel('copy'));
 })
 
-gulp.task(`watch`, function(){
-  gulp.watch(`app/css/style.css`, gulp.parallel(`sass`));
-  gulp.watch(`app/js/index.js`, gulp.parallel(`script`));
-})
-
-gulp.task(`default`, gulp.parallel(`sass`, `script`, `browser`, `watch`))
+// init default gulp task
+gulp.task('default', gulp.parallel('styles', 'script', 'html', 'copy', 'browser', 'watch'));
