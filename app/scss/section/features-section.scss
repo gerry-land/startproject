@@ -1,15 +1,13 @@
 .features-section {
-  min-height: 500px;
   background: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 80px;
+  padding: 0 80px 80px;
   box-sizing: border-box;
 
   & > .item {
     width: 25%;
-    height: 100px;
     text-align: center;
 
     & > .title {

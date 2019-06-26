@@ -1,56 +1,53 @@
 .introduction-component {
-    width: 300px;
-    height: 450px;
-    background: white;
-    padding: 20px; 
+  width: 300px;
+  background: white;
+  padding: 20px 20px 65px;
+  position: relative;
+
+  & > .item {
+    padding: 5px 0 0 80px;
+    margin-bottom: 35px;
     position: relative;
-    left: 752px;
-    top: 80px;
-    
-    & > .item {
-      padding-left: 80px;
-      position: relative;
 
-      & > .image {
-        position: absolute;
-        left: 0;
-        top: 0;
-      }
-
-        & > .title {
-        position: relative;
-        margin-top: 20px;
-        color: black;
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 22px;
-        }
-
-        & > .description {
-        position: relative;
-        margin-top: 20px;
-        color: #232323;
-        opacity: 0.5;
-
-        }
-      }
-      
-      & > .arrow {
-        display: block;
-        background: red;
-        position: relative;
-        padding-left: 60px;
-        & > .left {
-          background: orangered; 
-        }
-      }
-    
-    & > button {
-        background: black;
-        width: 350px;
-        height: 45px;
-        text-align: center;
-        color: white;
-        
+    &.-no-margin {
+      margin-bottom: 0;
     }
+
+    & > .image {
+      width: 62px;
+      height: 62px;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    & > .title {
+      position: relative;
+      color: #232323;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 24px;
+    }
+
+    & > .description {
+      position: relative;
+      margin-top: 10px;
+      font-size: 14px;
+      line-height: 22px;
+      color: #232323;
+      opacity: 0.5;
+    }
+  }
+
+  & > button {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background: black;
+    width: 100%;
+    height: 45px;
+    text-align: center;
+    color: white;
+    border: none;
+  }
 }
