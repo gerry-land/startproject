@@ -1,0 +1,56 @@
+.introduction-component {
+    width: 300px;
+    height: 450px;
+    background: white;
+    padding: 20px; 
+    position: relative;
+    left: 752px;
+    top: 80px;
+    
+    & > .item {
+      padding-left: 80px;
+      position: relative;
+
+      & > .image {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+        & > .title {
+        position: relative;
+        margin-top: 20px;
+        color: black;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 22px;
+        }
+
+        & > .description {
+        position: relative;
+        margin-top: 20px;
+        color: #232323;
+        opacity: 0.5;
+
+        }
+      }
+      
+      & > .arrow {
+        display: block;
+        background: red;
+        position: relative;
+        padding-left: 60px;
+        & > .left {
+          background: orangered; 
+        }
+      }
+    
+    & > button {
+        background: black;
+        width: 350px;
+        height: 45px;
+        text-align: center;
+        color: white;
+        
+    }
+}
