@@ -2,20 +2,22 @@
     width: 100%;
     height: 800px;
     background: #f5f6f8;
+    position: relative;
 
     & > .item {
-        height: 650px;
+        height: 580px;
         width: 1200px;
         background: black;
         margin-left: 80px;
+        
 
         & > .title {
             width: 600px;
             font-size: 72px;
-            font-weight: 400;
+            font-weight: 100;
             line-height: 80px;
             color: #fff;
-            padding-top: 25px;
+            padding-top: 95px;
             padding-left: 150px;
             
         }
@@ -23,7 +25,7 @@
         & > .description {
             padding-left: 155px;
             padding-top: 25px;
-            width: 430px;
+            width: 425px;
             height: 80px;
             font-size: 14px;
             font-weight: 300;
@@ -32,19 +34,30 @@
         }
 
         & > .button {
+            height: 30px;
             background-color: #26e6e6;
             color: #000;
-            margin-top: 150px;
+            margin-top: 100px;
             margin-left: 155px;
+            border: none;
+            border-radius: 40%;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 300;
         }
         
         & > .iPad {
-            padding-left: 500px;
-            padding-top: 200px;
+            width: 600px;
+            height: 500px;
+            position: absolute;
+            padding-left: 668px;
+            padding-top: 250px;
         }
 
         & > .arrow {
-            padding-left: 100px;
+            padding-left: 570px;
+            padding-top: 440px;
+            position: absolute;
         }
     }
 }
