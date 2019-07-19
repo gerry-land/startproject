@@ -15,7 +15,13 @@ position: relative;
     text-transform: uppercase;
     }
 
-    
+    & > .button {
+        background: #26e6e6;
+        text-transform: uppercase;
+        position: absolute;
+        margin-left: 500px;
+        margin-top: 200px;
+    }
 }
 
     & > .photo {
