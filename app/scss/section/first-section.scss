@@ -1,20 +1,20 @@
 .first-section {
     width: 100%;
-    height: auto;
+    min-height: 100vh;
     background: url('./images/office.png') center / no-repeat;
-
-    & > .header {
+    
+    & > .header-component {
 
         & > .logo {
-
+    
         }
-
+    
         & > .contact {
-
+    
         }
-
+    
         & > .menu {
-
+    
         }
     }
 
