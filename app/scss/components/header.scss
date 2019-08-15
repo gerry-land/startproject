@@ -1,14 +1,16 @@
-& > .header-component {
-
+.header-component {
+  
   & > .logo {
-
+    padding-top: 30px;
+    padding-left: 50px;
   }
 
   & > .contact {
-
+    text-transform: uppercase;
+    margin-left: 800px;
   }
 
   & > .menu {
-
+    text-transform: uppercase;
   }
 }
