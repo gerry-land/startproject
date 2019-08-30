@@ -15,25 +15,31 @@
     
         & > .left {
             position: absolute;
+            width: 350px;
+            height: 350px;
         }
 
         & > .center {
             position: absolute;
             padding-top: 50px;
-            padding-left: 300px;
+            padding-left: 400px;
+            width: 500px;
+            height: 400px;
         }
 
         & > .right {
             position: absolute;
-            padding-top: 293px;
-            padding-left: 848px;
+            padding-top: 405px;
+            padding-left: 998px;
+            width: 350px;
+            height: 250px;
             
         }
     }
 
     & > .content {
         text-align: center;
-        margin-top: 120px;
+        margin-top: 140px;
         margin-left: 220px;
         position: absolute;
 
@@ -58,6 +64,7 @@
 
         & > .description {
             color: #a8a8a8;
+            margin-top: 20px;
         }
     }
 }
