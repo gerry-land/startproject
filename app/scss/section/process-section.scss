@@ -1,0 +1,73 @@
+.process-section {
+position: relative;
+width: 100%;
+min-height: 100vh;
+
+    & > .heading {
+        position: absolute;
+
+        & > .title {
+            position: absolute;
+            font-size: 72px;
+            font-weight: 700;
+            line-height: 70px;
+            text-transform: uppercase;
+            color: #404040;
+            margin-left: 350px;
+            margin-top: 50px;
+            width: 600px;
+        }
+
+        & > .text {
+            position: absolute;
+            width: 1050px;
+            color: #5d5d5d;
+            font-family: "Roboto - Thin";
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 37px;
+            margin-top: 150px;
+            margin-left: 100px;
+            text-align: center;
+        }
+    }
+
+    & > .circle {
+        position: absolute;
+        margin-top: 300px;
+
+        & > .meeting {
+
+        }
+
+        & > .planning {
+
+        }
+
+        & > .execute {
+
+        }
+
+        & > .deliver {
+
+        }
+    }
+
+    & > .item {
+        
+        display: inline-block;
+
+        & > .process {
+            margin-left: 100px;
+            margin-top: 720px;
+        }
+
+        & > .description {
+            width: 200px;
+            height: 100px;
+            margin-left: 100px;
+            margin-top: 20px;
+            
+        }
+    }
+}
