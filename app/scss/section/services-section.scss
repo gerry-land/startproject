@@ -1,8 +1,12 @@
 .services-section {
 position: relative;
-background: url('background.png') no-repeat;
+background: url('./images/background.png') center;
+width: 100%;
+min-height: 170vh;
 
     & > .services {
+        position: absolute;
+        text-align: center;
         
         & > .title {
             color: #ffffff;
@@ -10,6 +14,7 @@ background: url('background.png') no-repeat;
             font-size: 72px;
             font-weight: 700;
             line-height: 70px;
+            text-transform: uppercase;
         }
 
         & > .description {
@@ -21,23 +26,36 @@ background: url('background.png') no-repeat;
         }
     }
 
-    & > .terms {
-        font-family: Roboto;
+    & > .adipisecting {
+        width: 400px;
+        display: inline-block;
+        margin-top: 180px;
+        background: #7a225d;
+        height: 100px;
 
-        & > .adipisecting {
-
+        & > .adipisecting2 {
+            display: inline-block;
         }
+    }
 
-        & > .quisquesit {
-
+    & > .quisquesit {
+        display: inline-block;
+        background: #480048;
+        height: 100px;
+        width: 400px;
+        
+        & > .quisquesit2 {
+            display: inline-block;
         }
+    }
 
-        & > .molestie {
-
-        }
-
-        & > .text {
-
+    & > .molestie {
+        height: 100px;
+        display: inline-block;
+        background: #300030;
+        width: 400px;
+        & > .molestie2 {
+            display: inline-block;
         }
     }
 }
