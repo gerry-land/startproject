@@ -1,0 +1,61 @@
+.services-section {
+position: relative;
+background: url('./images/background.png') center;
+width: 100%;
+min-height: 170vh;
+
+    & > .services {
+        position: absolute;
+        text-align: center;
+        
+        & > .title {
+            color: #ffffff;
+            font-family: Roboto;
+            font-size: 72px;
+            font-weight: 700;
+            line-height: 70px;
+            text-transform: uppercase;
+        }
+
+        & > .description {
+            font-family: "Roboto - Thin";
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 37px;
+        }
+    }
+
+    & > .adipisecting {
+        width: 400px;
+        display: inline-block;
+        margin-top: 180px;
+        background: #7a225d;
+        height: 100px;
+
+        & > .adipisecting2 {
+            display: inline-block;
+        }
+    }
+
+    & > .quisquesit {
+        display: inline-block;
+        background: #480048;
+        height: 100px;
+        width: 400px;
+        
+        & > .quisquesit2 {
+            display: inline-block;
+        }
+    }
+
+    & > .molestie {
+        height: 100px;
+        display: inline-block;
+        background: #300030;
+        width: 400px;
+        & > .molestie2 {
+            display: inline-block;
+        }
+    }
+}

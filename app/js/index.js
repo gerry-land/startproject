@@ -1,4 +1,5 @@
 function initColorText() {
+  return;
   const text = document.getElementsByClassName('js-color-text')[0];
 
   const colors = [
