@@ -1,0 +1,25 @@
+.header-component {
+  position: relative;
+  
+  & > .logo {
+    padding-top: 30px;
+    padding-left: 50px;
+    position: absolute;
+  }
+
+  & > .contact {
+    text-transform: uppercase;
+    margin-left: 1100px;
+    margin-top: 50px;
+    position: absolute;
+    cursor: pointer;
+  }
+
+  & > .menu {
+    text-transform: uppercase;
+    position: absolute;
+    margin-left: 1200px;
+    margin-top: 50px;
+    cursor: pointer;
+  }
+}
