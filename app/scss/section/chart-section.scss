@@ -3,54 +3,11 @@
     position: relative;
     display: flex;
 
-    & > .statistics {
+    & > .chart {
         width: 50%;
-        background: #eeeeee url('./images/chart.png') bottom / 100% 20% no-repeat;
-        min-height: 80vh;
-
-        & > .point {
-            width: 40px;
-            height: 40px;
-            border: 2px solid red;
-            border-radius: 50%;
-            background: none;
-            position: absolute;
-            left: 40%;
-            top: 80%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            &::after {
-                content: '';
-                width: 4px;
-                height: 4px;
-                border-radius: 50%;
-                background: red;
-            }
-        }
-
-        & > .heading {
-            margin-top: 250px;
-            margin-left: 330px;
-            color: #383838;
-            font-size: 20px;
-            font-weight: 300;
-            line-height: 44px;
-        }
-
-        & > .description {
-            margin-top: 290px;
-            margin-left: 330px;
-            color: #7e7e7e;
-            font-size: 14px;
-            font-weight: 300;
-            line-height: 21px;
-        }
     }
 
-    & > .latina {
-        min-height: 80vh;
+    & > .article {
         width: 50%;
 
         & > .video {
