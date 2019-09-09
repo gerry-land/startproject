@@ -1,0 +1,369 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: Myriad;
+  src: url("./../../fonts/myriad/MYRIADPRO-REGULAR.OTF"); }
+
+@font-face {
+  font-family: Myriad;
+  font-weight: 300;
+  src: url("./../../fonts/myriad/MyriadPro-Light.otf"); }
+
+body {
+  font-family: Montserrat; }
+
+.first-section {
+  position: relative;
+  width: 100%;
+  background: url("./images/welcome-background.jpg") center/cover no-repeat;
+  height: 100vh; }
+  .first-section > .content {
+    text-align: center;
+    height: calc(100vh - 90px);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center; }
+    .first-section > .content > .title {
+      width: 100%;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 73px;
+      font-weight: 600;
+      line-height: 71px; }
+      .first-section > .content > .title > span {
+        color: #ed322d; }
+    .first-section > .content > .description {
+      width: 100%;
+      color: #a8a8a8;
+      font-size: 20px;
+      font-weight: 300;
+      margin-top: 20px; }
+
+.chart-section {
+  width: 100%;
+  position: relative;
+  display: flex; }
+  .chart-section > .chart {
+    width: 50%; }
+  .chart-section > .article {
+    width: 50%; }
+    .chart-section > .article > .video {
+      border-top: 1px solid gray;
+      padding-top: 20px;
+      position: absolute;
+      padding-left: 200px; }
+      .chart-section > .article > .video > .player {
+        position: absolute;
+        left: 20;
+        top: 20;
+        width: 160px;
+        height: 90px;
+        background: url("./images/video.png") 100% no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        -webkit-filter: brightness(0.8);
+                filter: brightness(0.8); }
+        .chart-section > .article > .video > .player > .icon {
+          width: 50px;
+          height: 50px;
+          border: 2px solid white;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          .chart-section > .article > .video > .player > .icon::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border: 5px solid red;
+            border-left-color: transparent;
+            border-top-color: transparent;
+            transform: rotate(-45deg); }
+      .chart-section > .article > .video > .text {
+        color: #5d5d5d;
+        font-size: 16px;
+        font-weight: 200;
+        line-height: 31px; }
+    .chart-section > .article > .title {
+      font-weight: 600;
+      font-size: 72px;
+      line-height: 70px;
+      color: #404040;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 100px;
+      position: relative; }
+      .chart-section > .article > .title > span {
+        color: red; }
+      .chart-section > .article > .title::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 40px;
+        height: 1px;
+        background: gray;
+        left: 17%;
+        bottom: -20px; }
+    .chart-section > .article > .description {
+      margin: 40px 0;
+      text-align: center;
+      color: #5d5d5d;
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 31px; }
+
+.process-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; }
+  .process-section > .heading {
+    position: absolute; }
+    .process-section > .heading > .title {
+      position: absolute;
+      font-size: 72px;
+      font-weight: 700;
+      line-height: 70px;
+      text-transform: uppercase;
+      color: #404040;
+      margin-left: 350px;
+      margin-top: 50px;
+      width: 600px; }
+    .process-section > .heading > .text {
+      position: absolute;
+      width: 1050px;
+      color: #5d5d5d;
+      font-family: "Roboto - Thin";
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 37px;
+      margin-top: 150px;
+      margin-left: 100px;
+      text-align: center; }
+  .process-section > .circle {
+    position: absolute;
+    margin-top: 300px; }
+    .process-section > .circle > .deliver {
+      position: absolute;
+      padding-left: 980px;
+      padding-top: 110px; }
+    .process-section > .circle > .execute {
+      position: absolute;
+      padding-left: 600px; }
+    .process-section > .circle > .planning {
+      position: absolute;
+      padding-left: 290px;
+      padding-top: 33px; }
+    .process-section > .circle > .meeting {
+      position: absolute;
+      padding-left: 120px;
+      padding-top: 105px; }
+    .process-section > .circle > .content {
+      position: absolute;
+      margin-top: 190px;
+      margin-left: 170px;
+      color: #ffffff;
+      font-family: Roboto;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 32px;
+      text-transform: uppercase; }
+    .process-section > .circle > .content2 {
+      position: absolute;
+      margin-top: 170px;
+      margin-left: 390px;
+      color: #ffffff;
+      font-family: Roboto;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 32px;
+      text-transform: uppercase; }
+    .process-section > .circle > .content3 {
+      position: absolute;
+      margin-top: 190px;
+      margin-left: 750px;
+      color: #ffffff;
+      font-family: Roboto;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 32px;
+      text-transform: uppercase; }
+    .process-section > .circle > .content4 {
+      position: absolute;
+      margin-top: 190px;
+      margin-left: 1025px;
+      color: #ffffff;
+      font-family: Roboto;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 32px;
+      text-transform: uppercase; }
+  .process-section > .item {
+    width: 290px;
+    display: inline-block; }
+    .process-section > .item > .process {
+      margin-left: 90px;
+      margin-top: 720px;
+      color: #5d5d5d;
+      font-family: Roboto;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 26px;
+      text-transform: uppercase; }
+    .process-section > .item > .description {
+      width: 220px;
+      margin-left: 90px;
+      margin-top: 10px;
+      color: #5d5d5d;
+      font-family: Roboto;
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 26px; }
+
+.services-section {
+  position: relative;
+  background: url("./images/services-background.jpg") center/cover no-repeat;
+  width: 100%; }
+  .services-section > .text {
+    padding-top: 150px;
+    text-align: center; }
+    .services-section > .text > .title {
+      color: #ffffff;
+      font-family: Roboto;
+      font-size: 72px;
+      font-weight: 600;
+      line-height: 70px;
+      text-transform: uppercase; }
+    .services-section > .text > .description {
+      margin: 40px auto 90px;
+      display: inline-block;
+      width: 70%;
+      font-family: "Roboto - Thin";
+      color: #ffffff;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 37px; }
+  .services-section > .wrapper {
+    width: 100%;
+    padding: 80px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    box-sizing: border-box; }
+    .services-section > .wrapper > .item {
+      height: 170px;
+      flex-basis: 33%;
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      .services-section > .wrapper > .item.-top {
+        background: #7a225d; }
+        .services-section > .wrapper > .item.-top > .arrow {
+          background: #802c64; }
+      .services-section > .wrapper > .item.-middle {
+        background: #480048; }
+        .services-section > .wrapper > .item.-middle > .arrow {
+          background: #500c50; }
+      .services-section > .wrapper > .item.-bottom {
+        background: #300030; }
+        .services-section > .wrapper > .item.-bottom > .arrow {
+          background: #390c39; }
+      .services-section > .wrapper > .item > .arrow {
+        height: 100%;
+        border: none;
+        width: 120px; }
+      .services-section > .wrapper > .item > .content {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0 20px;
+        box-sizing: border-box;
+        color: #ffffff; }
+        .services-section > .wrapper > .item > .content > .title {
+          width: 100%;
+          margin: 0 0 10px;
+          font-size: 25px;
+          font-weight: 400; }
+        .services-section > .wrapper > .item > .content > .description {
+          width: 100%;
+          margin: 0;
+          font-size: 16px;
+          font-weight: 300; }
+
+.header-component {
+  width: 100%;
+  padding: 20px 80px 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .header-component > .logo {
+    height: 70px; }
+  .header-component > .buttons > .button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 0 20px;
+    line-height: 20px;
+    outline: none;
+    cursor: pointer; }
+    .header-component > .buttons > .button.-border {
+      border-right: 1px solid #ffffff; }
+    .header-component > .buttons > .button:hover {
+      opacity: 0.7; }
+
+.chart-component {
+  padding-top: 150px; }
+  .chart-component > .image {
+    width: 100%; }
+    .chart-component > .image .line {
+      position: relative; }
+      .chart-component > .image .line::before {
+        content: "Interdum tincidunt";
+        display: block; }
+      .chart-component > .image .line::after {
+        content: "nec laoreet volutpat, mi diam consectetur </br> nisl, a vestibulum enimer";
+        display: block; }
