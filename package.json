@@ -14,6 +14,7 @@
     "browser-sync": "^2.26.5",
     "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
+    "gulp-embed-svg": "^1.1.5",
     "gulp-lb-include": "^0.3.1",
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.2"

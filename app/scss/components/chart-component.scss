@@ -1,0 +1,22 @@
+.chart-component {
+  padding-top: 150px;
+
+  & > .image {
+    width: 100%;
+
+    & .line {
+      position: relative;
+
+      &::before {
+        content: "Interdum tincidunt";
+        display: block;
+      }
+
+      &::after {
+        content: "nec laoreet volutpat, mi diam consectetur </br>
+        nisl, a vestibulum enimer";
+        display: block;
+      }
+    }
+  }
+}
