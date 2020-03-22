@@ -1,0 +1,51 @@
+.calculator {
+  width: 300px;
+  height: auto;
+  margin: 100px auto;
+  background: #ffffff;
+
+  & > .row {
+    width: 100%;
+    padding: 10px 30px;
+    box-sizing: border-box;
+
+    & > .field {
+      padding: 5px;
+      box-sizing: border-box;
+      border: 1px solid black;
+      outline: none;
+    }
+
+    & > .operator {
+      font-size: 20px;
+      width: 30px;
+      height: 30px;
+      background: whitesmoke;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        border: 1px solid black;
+      }
+    }
+
+    & > .calculate {
+      padding: 10px;
+      cursor: pointer;
+      background: whitesmoke;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+
+    & > .result {
+      width: 100%;
+      padding: 5px;
+      border-bottom: 2px solid black;
+
+      &.-error {
+        border-color: red;
+        color: red;
+      }
+    }
+  }
+}
