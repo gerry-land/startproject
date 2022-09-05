@@ -7,13 +7,43 @@ on:
         description: 'Commit hash to get diff from'
         required: true
 
+env:
+  FORKED_REPO: Andrii-Kalaida/startproject
+  CURRENT_REPO: 
+
 jobs:
   pull_messages:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout forked repo
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
-        repository: /forked-repo
-        # token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 2
+        repository: ${{ env.FORKED_REPO }}
         path: forked-repo
+
+
+    - name: Checkout current repo
+      uses: actions/checkout@v3
+      with:
+        path: current-repo
+
+    - name: Get diff from forked repo
+      run: |
+        cd forked-repo
+        git diff ${{ github.event.inputs.commit_hash }} HEAD -- ./app > ../current-repo/diff.patch
+
+    - name: Apply diff to current repo
+      run: |
+        cd current-repo
+        git apply diff.patch
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          branch: update-from-forked
+          author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+          commit-message: Updated messages
+          title: Updated messages
+          body: test
+          path: 'current-repo'
