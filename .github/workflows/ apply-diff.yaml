@@ -22,16 +22,15 @@ jobs:
         repository: ${{ env.FORKED_REPO }}
         path: forked-repo
 
-
     - name: Checkout current repo
       uses: actions/checkout@v3
       with:
         path: current-repo
 
-    - name: Get diff from forked repo
-      run: |
-        cd forked-repo
-        git diff ${{ github.event.inputs.commit_hash }} HEAD > ../current-repo/diff.patch
+    # - name: Get diff from forked repo
+    #   run: |
+    #     cd forked-repo
+    #     git diff ${{ github.event.inputs.commit_hash }} HEAD > ../current-repo/diff.patch
 
     # - name: Apply diff to current repo
     #   run: |
