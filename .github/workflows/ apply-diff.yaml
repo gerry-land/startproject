@@ -32,7 +32,7 @@ jobs:
     - name: Get diff from forked repo
       run: |
         cd forked-repo
-        git diff ${{ github.event.inputs.commit_hash }} HEAD -- ./app > ../current-repo/diff.patch
+        git diff ${{ github.event.inputs.commit_hash }} HEAD > ../current-repo/diff.patch
 
     - name: Apply diff to current repo
       run: |
