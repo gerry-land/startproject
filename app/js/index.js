@@ -7,6 +7,8 @@ window.addEventListener('load', (e) => {
   let lastClickedOperator = '';
   let currentValue = 0;
 
+  // add some change
+
   operators.forEach(operator => {
     operator.addEventListener('click', () => {
       let valueFromField = getValueFromField(field);
