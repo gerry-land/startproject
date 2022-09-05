@@ -1,0 +1,19 @@
+name: Apply diff forked repo and create PR
+
+on:
+  workflow_dispatch:
+    inputs:
+      commit_hash:
+        description: 'Commit hash to get diff from'
+        required: true
+
+jobs:
+  pull_messages:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout forked repo
+      uses: actions/checkout@v2
+      with:
+        repository: /forked-repo
+        # token: ${{ secrets.GITHUB_TOKEN }}
+        path: forked-repo
