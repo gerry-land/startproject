@@ -28,6 +28,7 @@ jobs:
       with:
         path: current-repo
 
+
     - name: Get diff from forked repo
       run: |
         cd forked-repo
